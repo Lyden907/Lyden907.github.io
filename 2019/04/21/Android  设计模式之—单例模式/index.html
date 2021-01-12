@@ -96,17 +96,18 @@
 
 
 
-  <meta name="description" content="Butterknife 简介Butterknife是一款Android系统的注入式框架，通过注解处理器(annotationProcessor技术)，在项目编译的 时候生成XXXActivity_ViewBinding辅助类。框架中使用到的注解并不是在运行时的反射，而是编译时生成新的class，所以对整个项目的性能基本没有太 大的损失。 Butterknife 优势代码简洁，结构清晰，可读性强，">
+  <meta name="description" content="Android  设计模式之—单例模式定义   单例是一种对象的创建方式，他是确保一个类只有一个实例，而且自己实例化并向整个系统提供这个实例 特点   单例类只能有一个实例   单例类必须自己创建自己的唯一实例   单例类必须给其它对象提供这个实例 单例模式创建的方法 懒汉式，线程不安全懒汉式是指在申明对象的时候并不去实例化，而且到使用的时候才会去实例化对象。优点：类加载比较快。缺点：当多个线程并">
+<meta name="keywords" content="Android">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ButterKnife原理">
-<meta property="og:url" content="http://yoursite.com/2019/04/03/ButterKnife原理/index.html">
+<meta property="og:title" content="Android  设计模式之—单例模式">
+<meta property="og:url" content="http://yoursite.com/2019/04/21/Android  设计模式之—单例模式/index.html">
 <meta property="og:site_name" content="李丹的个人主页">
-<meta property="og:description" content="Butterknife 简介Butterknife是一款Android系统的注入式框架，通过注解处理器(annotationProcessor技术)，在项目编译的 时候生成XXXActivity_ViewBinding辅助类。框架中使用到的注解并不是在运行时的反射，而是编译时生成新的class，所以对整个项目的性能基本没有太 大的损失。 Butterknife 优势代码简洁，结构清晰，可读性强，">
+<meta property="og:description" content="Android  设计模式之—单例模式定义   单例是一种对象的创建方式，他是确保一个类只有一个实例，而且自己实例化并向整个系统提供这个实例 特点   单例类只能有一个实例   单例类必须自己创建自己的唯一实例   单例类必须给其它对象提供这个实例 单例模式创建的方法 懒汉式，线程不安全懒汉式是指在申明对象的时候并不去实例化，而且到使用的时候才会去实例化对象。优点：类加载比较快。缺点：当多个线程并">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-04T07:08:23.505Z">
+<meta property="og:updated_time" content="2021-01-12T12:48:46.221Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ButterKnife原理">
-<meta name="twitter:description" content="Butterknife 简介Butterknife是一款Android系统的注入式框架，通过注解处理器(annotationProcessor技术)，在项目编译的 时候生成XXXActivity_ViewBinding辅助类。框架中使用到的注解并不是在运行时的反射，而是编译时生成新的class，所以对整个项目的性能基本没有太 大的损失。 Butterknife 优势代码简洁，结构清晰，可读性强，">
+<meta name="twitter:title" content="Android  设计模式之—单例模式">
+<meta name="twitter:description" content="Android  设计模式之—单例模式定义   单例是一种对象的创建方式，他是确保一个类只有一个实例，而且自己实例化并向整个系统提供这个实例 特点   单例类只能有一个实例   单例类必须自己创建自己的唯一实例   单例类必须给其它对象提供这个实例 单例模式创建的方法 懒汉式，线程不安全懒汉式是指在申明对象的时候并不去实例化，而且到使用的时候才会去实例化对象。优点：类加载比较快。缺点：当多个线程并">
 
 
 
@@ -114,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/04/03/ButterKnife原理/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/21/Android  设计模式之—单例模式/">
 
 
 
@@ -124,7 +125,7 @@
   };
 </script>
 
-  <title>ButterKnife原理 | 李丹的个人主页</title>
+  <title>Android  设计模式之—单例模式 | 李丹的个人主页</title>
   
 
 
@@ -344,7 +345,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/03/ButterKnife原理/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/21/Android  设计模式之—单例模式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lyden">
@@ -361,7 +362,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">ButterKnife原理
+          <h1 class="post-title" itemprop="name headline">Android  设计模式之—单例模式
 
               
             
@@ -387,7 +388,7 @@
                 
               
 
-              <time title="创建时间：2019-04-03 10:05:41" itemprop="dateCreated datePublished" datetime="2019-04-03T10:05:41+08:00">2019-04-03</time>
+              <time title="创建时间：2019-04-21 21:30:00" itemprop="dateCreated datePublished" datetime="2019-04-21T21:30:00+08:00">2019-04-21</time>
             
 
             
@@ -404,7 +405,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-04 15:08:23" itemprop="dateModified" datetime="2019-04-04T15:08:23+08:00">2019-04-04</time>
+                <time title="修改时间：2021-01-12 20:48:46" itemprop="dateModified" datetime="2021-01-12T20:48:46+08:00">2021-01-12</time>
               
             
           </span>
@@ -421,7 +422,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/开发笔记/" itemprop="url" rel="index"><span itemprop="name">开发笔记</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/技术分析/" itemprop="url" rel="index"><span itemprop="name">技术分析</span></a></span>
 
                 
                 
@@ -440,8 +441,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/04/03/ButterKnife原理/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/04/03/ButterKnife原理/" itemprop="commentCount"></span>
+                <a href="/2019/04/21/Android  设计模式之—单例模式/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/04/21/Android  设计模式之—单例模式/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -469,17 +470,18 @@
       
 
       
-        <ol>
-<li><h5 id="Butterknife-简介"><a href="#Butterknife-简介" class="headerlink" title="Butterknife 简介"></a>Butterknife 简介</h5>Butterknife是一款Android系统的注入式框架，通过注解处理器(annotationProcessor技术)，在项目编译的 时候生成XXXActivity_ViewBinding辅助类。<br>框架中使用到的注解并不是在运行时的反射，而是编译时生成新的class，所以对整个项目的性能基本没有太 大的损失。</li>
-<li><h5 id="Butterknife-优势"><a href="#Butterknife-优势" class="headerlink" title="Butterknife 优势"></a>Butterknife 优势</h5>代码简洁，结构清晰，可读性强，提高代码效率。<br>运行时不会影响APP效率，使用配置方便。</li>
-<li><h5 id="Butterknife原理分析"><a href="#Butterknife原理分析" class="headerlink" title="Butterknife原理分析"></a>Butterknife原理分析</h5><p>先从ButterKnife.bind开始分析，不论何种形式的bind最后都会调用createBinding()这个方法<br>返回一个Unbinder对象。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@NonNull @UiThread</span><br><span class="line"> public static Unbinder bind(@NonNull Object target, @NonNull View source) &#123;</span><br><span class="line">   return createBinding(target, source);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-<p>继续跟进到createBinding方法中看看下面的代码内容，首先target得到绑定的Activity的class,然后通过findBindingConstructorForClass(class)方法得到一个继承自Unbinder的Constructor(构造器)，</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Constructor&lt;? extends Unbinder&gt; constructor = findBindingConstructorForClass(targetClass);</span><br></pre></td></tr></table></figure>
-<p>然后通过反射 constructor.newInstance(target,source)得到一个unbinder的一个实例返回。<br>继续跟进到findBindingConstructorForClass()方法中，可以看到首先判断缓存中是否有对应的unbinder</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;Class&lt;?&gt;, Constructor&lt;? extends Unbinder&gt;&gt; BINDINGS = new LinkedHashMap&lt;&gt;();//缓存对应的class及constructor以提高效率。</span><br><span class="line">Constructor&lt;? extends Unbinder&gt; bindingCtor = BINDINGS.get(cls);//获取对应cls的构造器</span><br></pre></td></tr></table></figure>
+        <h3 id="Android-设计模式之—单例模式"><a href="#Android-设计模式之—单例模式" class="headerlink" title="Android  设计模式之—单例模式"></a>Android  设计模式之—单例模式</h3><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>   单例是一种对象的创建方式，他是确保一个类只有一个实例，而且自己实例化并向整个系统提供这个实例</p>
+<h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><p>   单例类只能有一个实例<br>   单例类必须自己创建自己的唯一实例<br>   单例类必须给其它对象提供这个实例</p>
+<h4 id="单例模式创建的方法"><a href="#单例模式创建的方法" class="headerlink" title="单例模式创建的方法"></a>单例模式创建的方法</h4><ol>
+<li><p>懒汉式，线程不安全<br>懒汉式是指在申明对象的时候并不去实例化，而且到使用的时候才会去实例化对象。<br>优点：类加载比较快。<br>缺点：当多个线程并行调用getIntance()方法的时候，会创建多个对象。  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">   public class Singleton &#123;</span><br><span class="line">    private static Singleton instance;</span><br><span class="line">    private Singleton ()&#123;&#125;// 私有构造方法</span><br><span class="line"></span><br><span class="line">    public static Singleton getInstance() &#123;//向外提供这个实例</span><br><span class="line">     if (instance == null) &#123;</span><br><span class="line">         instance = new Singleton();//自己创建自己的实例</span><br><span class="line">     &#125;</span><br><span class="line">     return instance;//唯一实例</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2.懒汉式，线程安全<br>此种方法解决了上面提到的在多线程中创建多个对象的问题，给getInstance()方法加锁(synchronized)。<br>优点：在多线程的情况下，也能保证对象的单一。<br>缺点：多线程情况下，每次获取对象都需排队等待获取锁，效率较低。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">   public class Singleton &#123;</span><br><span class="line">    private static Singleton instance;</span><br><span class="line">    private Singleton ()&#123;&#125;// 私有构造方法</span><br><span class="line">    public static synchronized Singleton getInstance() &#123;//向外提供这个实例</span><br><span class="line">     if (instance == null) &#123;</span><br><span class="line">         instance = new Singleton();//自己创建自己的实例</span><br><span class="line">     &#125;</span><br><span class="line">     return instance;//唯一实例</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">  ```  </span><br><span class="line">  </span><br><span class="line">  3.饿汉式，线程安全  </span><br><span class="line">    此方法是基于类加载机制避免了多线程情况下的同步问题，在类被装载的时候就将对象实例化。  </span><br><span class="line">    优点：没有加锁，对象访问效率更高。  </span><br><span class="line">    缺点：类被装载的时候就实例化对象，会导致资源浪费。</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
+<p>public class Singleton{<br>    private static Singleton instance=new Singleton();<br>    private Singleton(){}<br>    public static Singleton getInstance(){<br>        return instance;<br>    }<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">4.双锁双校验，线程安全  </span><br><span class="line">   此方法采用懒加载的方式，保证资源的节省，采用双重锁机制，保证多线程下的线程安全和使用效率。  </span><br><span class="line">   优点：在多线程的情下仍然有保持高性能  </span><br><span class="line">   缺点: 实现复杂。  </span><br><span class="line">   ```  </span><br><span class="line">   public class Singleton&#123;</span><br><span class="line">1.        private volatile  static Singleton instance;</span><br><span class="line">       private Singleton()&#123;&#125;</span><br><span class="line">       public static Singleton getInstance()&#123;//不采用方法锁，保证多线程调用效率。</span><br><span class="line">       if(instance==null)&#123;</span><br><span class="line">         //此处加判断，保证获取对象不会被重复创建</span><br><span class="line">         synchronize(Singleton.class)&#123;//    类锁，保证多线程下，对象不被重复创建</span><br><span class="line">         if(instance==null)&#123;</span><br><span class="line">             instance=new Singleton();</span><br><span class="line">         &#125;</span><br><span class="line">             </span><br><span class="line">         &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       return instance;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   ```  </span><br><span class="line">   引入volatile  关键字是为了防止指令重排，在构造对象的时候，一般分为以下三步：  </span><br><span class="line">1.    分配内存空间</span><br><span class="line">2.    初始化对象</span><br><span class="line">3.    将内存空间地址赋值给对应的引用。        </span><br><span class="line"></span><br><span class="line">但因为操作系统可以对指令进行重新排序，所以过程可能会变成：   </span><br><span class="line"></span><br><span class="line">1. 分配内存空间</span><br><span class="line">2. 将内存空间地址赋值给对应的引用</span><br><span class="line">3. 初始化对象  </span><br><span class="line">这样的情况下，在多线程时可能会将一个未被初始化的对象给返回，因此我们需要防止这种情况发生，所以需要将变量设置为volatile类型的变量.</span><br><span class="line"></span><br><span class="line">5.内部类的  线程安全  </span><br><span class="line">   此方法是利用静态类只在第一次调用时才加载的特性来实现单例模式，只有在getInstance()方法中才加载内部类，而加载过程是线程安全的。</span><br></pre></td></tr></table></figure></p>
+<p>public class Singleton{<br>    private Singleton(){}<br>    private static class SingletonHolder{<br>        private static Singleton  instance=new Singleton();<br>    }<br>    public static Singleton getInstance(){<br>        return SingletonHolder.instance;<br>    }<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">6.枚举，线程安全  </span><br><span class="line"> 此方法是利用了枚举的特性，枚举值只有一个时，其实例也只有一个，并且JAVA中的枚举可以和类一样任意定义方法以及属性，故可以用枚举来实现单例，这也是目前实现单例最优的方式</span><br></pre></td></tr></table></figure></p>
+<p>enum EnumSingleton{<br>    INSTANCE;<br>    public void doSomeThing(){<br>    }<br>}<br><code>`</code></p>
 
       
     </div>
@@ -501,6 +503,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag"># Android</a>
+          
+        </div>
+      
 
       
       
@@ -510,8 +518,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/01/ButterKnife使用/" rel="next" title="ButterKnife使用">
-                <i class="fa fa-chevron-left"></i> ButterKnife使用
+              <a href="/2019/04/15/Handler机制/" rel="next" title="Handler机制">
+                <i class="fa fa-chevron-left"></i> Handler机制
               </a>
             
           </div>
@@ -519,10 +527,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/07/Android内存优化及内存回收/" rel="prev" title="Android内存优化及内存回收">
-                Android内存优化及内存回收 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -704,7 +708,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Butterknife-简介"><span class="nav-number">1.</span> <span class="nav-text">Butterknife 简介</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Butterknife-优势"><span class="nav-number">2.</span> <span class="nav-text">Butterknife 优势</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Butterknife原理分析"><span class="nav-number">3.</span> <span class="nav-text">Butterknife原理分析</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Android-设计模式之—单例模式"><span class="nav-number">1.</span> <span class="nav-text">Android  设计模式之—单例模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#定义"><span class="nav-number">1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#特点"><span class="nav-number">1.2.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#单例模式创建的方法"><span class="nav-number">1.3.</span> <span class="nav-text">单例模式创建的方法</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -875,9 +879,9 @@ function showSubtitle()
 
 <script>
   var disqus_config = function() {
-    this.page.url = "http://yoursite.com/2019/04/03/ButterKnife原理/";
-    this.page.identifier = "2019/04/03/ButterKnife原理/";
-    this.page.title = 'ButterKnife原理';
+    this.page.url = "http://yoursite.com/2019/04/21/Android  设计模式之—单例模式/";
+    this.page.identifier = "2019/04/21/Android  设计模式之—单例模式/";
+    this.page.title = 'Android  设计模式之—单例模式';
     };
   function loadComments() {
     var d = document, s = d.createElement('script');
